@@ -1,10 +1,10 @@
-package com.shh.tasktreckerapi;
+package com.shh.tasktrackerapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TaskTreckerApiApplicationTests {
+class TaskTreckarApiApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,13 +1,13 @@
-package com.shh.tasktreckerapi;
+package com.shh.tasktrackerapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskTreckerApiApplication {
+public class TaskTrackerApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TaskTreckerApiApplication.class, args);
+        SpringApplication.run(TaskTrackerApiApplication.class, args);
     }
 
 }
