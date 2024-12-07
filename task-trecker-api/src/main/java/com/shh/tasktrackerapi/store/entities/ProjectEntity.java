@@ -1,18 +1,20 @@
-package com.shh.tasktrackerapi.store.entity;
+package com.shh.tasktrackerapi.store.entities;
+
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.Instant;
-
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter @Setter @ToString
-@Table(name = "task")
-public class TaskEntity {
+@Table(name = "project")
+public class ProjectEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +23,11 @@ public class TaskEntity {
     @Column(unique = true)
     private String name;
 
-    private String description;
-
     @Builder.Default
     private Instant createdAt = Instant.now();
 
+    @Builder.Default
+    @OneToMany
+    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    private List<TaskStateEntity> taskStates = new ArrayList<>();
 }
