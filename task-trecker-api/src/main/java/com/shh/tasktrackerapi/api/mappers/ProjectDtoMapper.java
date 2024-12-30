@@ -2,8 +2,9 @@ package com.shh.tasktrackerapi.api.mappers;
 
 import com.shh.tasktrackerapi.api.dto.ProjectDto;
 import com.shh.tasktrackerapi.store.entities.ProjectEntity;
-import org.springframework.scheduling.config.Task;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProjectDtoMapper {
 
     public ProjectDto makeProjectDto(ProjectEntity entity) {
